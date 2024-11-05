@@ -1,2 +1,10 @@
 @use "../abstract/variable";
 
+@font-face {
+    font-family: "quicksand";
+    src: url(../font/Quicksand-Regular.ttf);
+}
+
+body {
+    font-family: "quicksand";
+}
