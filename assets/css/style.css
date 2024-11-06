@@ -1,12 +1,1 @@
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-}
-
-body {
-  background-color: rgb(42, 26, 64);
-}
-
-/*# sourceMappingURL=style.css.map */
+*{margin:0;padding:0;text-decoration:none;list-style:none}@font-face{font-family:"quicksand";src:url(../font/Quicksand-Regular.ttf)}body{font-family:"quicksand"}/*# sourceMappingURL=style.css.map */
