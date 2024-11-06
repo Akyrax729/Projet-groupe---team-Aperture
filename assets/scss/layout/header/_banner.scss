@@ -1,2 +1,15 @@
 @use "../../abstract/mixins";
-@use "../../abstract/variable";
+@use "../../abstract/variable" as var;
+
+#banner {
+    background-color: var.$primarycolor;
+
+    #carrousel {
+        width: 200%;
+
+        img{
+            // width: 100vw;
+            background-size: cover;
+        }
+    }
+}
