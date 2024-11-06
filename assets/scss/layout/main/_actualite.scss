@@ -1,2 +1,40 @@
 @use "../../abstract/mixins";
-@use "../../abstract/variable";
+@use "../../abstract/variable" as v;
+
+.actualite_evenements {
+    background-color: v.$primarycolor;
+}
+
+#actualite {
+    background-color: v.$secondarycolor;
+    color: white;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 15px;
+    width: 49%;
+
+    .text_droite {
+        @include mixins.flex ($justify :flex-start, $align :flex-start);
+
+        img {
+            width: 20rem;
+            height: 15rem;
+        }
+        
+        p {
+            font-size: 16px;
+            width: 30rem
+        }
+    }
+
+    .text_gauche {
+        @include mixins.flex ();
+
+        img {
+            width: 20rem;
+            height: 15rem;
+
+        }
+    }
+  
+}
