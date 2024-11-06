@@ -1,2 +1,71 @@
 @use "../abstract/mixins";
-@use "../abstract/variable";
+@use "../abstract/variable" as var;
+
+footer {
+    background-color: var.$primarycolor;
+    @include mixins.flex ($justify: space-between);
+    padding: 2rem 0;
+    padding-right: 2rem;
+
+    div {
+        margin-left: 3rem;
+        @include mixins.flex (); 
+
+        a {
+            @include mixins.flex ();
+            font-size: 20px;
+            @include mixins.hover();
+            color: black;
+            
+        }
+        img {
+            width: 64px;
+            margin: 10px;
+        }
+
+        i {
+            margin-right: 1rem;
+            font-size: 24px;
+            color: var.$secondarycolor;
+        }
+
+        ul {
+            @include mixins.flex ();
+
+            i {
+                color: black;
+                font-size: 48px;
+            }
+            .fa-facebook {
+                @include mixins.hover (rgb(46, 46, 192));
+            }
+            .fa-x-twitter {
+                @include mixins.hover (black);
+            }
+            .fa-instagram {
+                @include mixins.hover (rgb(252, 68, 99));
+            }
+            .fa-snapchat {
+                @include mixins.hover (yellow);
+            }
+            .fa-youtube {
+                @include mixins.hover (red);
+            }
+        }
+    }
+    .column {
+        flex-direction: column;
+
+        i {
+            margin: 0;
+        }
+    }
+    ul {
+        li {
+            a {
+                color: black;
+                @include mixins.hover ();
+            }
+        }
+    }
+}

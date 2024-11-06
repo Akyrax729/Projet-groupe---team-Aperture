@@ -7,12 +7,12 @@
     align-items: $align;
 }
 
-@mixin hover ($fontsize: 32px) {
+@mixin hover ($hcolor: var.$accentcolor) {
 
     transition: all 300ms;
 
     &:hover {
-        color: var.$accentcolor;
-        font-size: $fontsize;
+        color: $hcolor;
+        transform: scale(1.1);
     }
 }

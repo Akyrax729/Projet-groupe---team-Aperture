@@ -14,7 +14,7 @@ header {
         a {
             @include mixins.flex ();
             font-size: 20px;
-            @include mixins.hover(24px);
+            @include mixins.hover();
             color: black;
             
         }
@@ -33,12 +33,16 @@ header {
                 padding: 0 1rem;
 
                 a {
+                    display: block;
                     color: black;
                     font-weight: 700;
                     font-size: 24px;
 
                     @include mixins.hover ();
                 }
+            }
+            .trait {
+                border-right: 1px solid black;
             }
         }
     }
