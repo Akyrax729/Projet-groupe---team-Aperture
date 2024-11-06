@@ -1,2 +1,45 @@
 @use "../../abstract/mixins";
-@use "../../abstract/variable";
+@use "../../abstract/variable" as var;
+
+header {
+    background-color: var.$primarycolor;
+}
+
+#navbar {
+    @include mixins.flex ($justify: space-between);
+
+    div {
+        margin-left: 3rem;
+
+        a {
+            @include mixins.flex ();
+            font-size: 20px;
+            @include mixins.hover(24px);
+            color: black;
+            
+        }
+        img {
+            width: 64px;
+            margin: 10px;
+        }
+    }
+
+    nav {
+        margin-right: 3rem;
+        ul {
+            @include mixins.flex ();
+
+            li {
+                padding: 0 1rem;
+
+                a {
+                    color: black;
+                    font-weight: 700;
+                    font-size: 24px;
+
+                    @include mixins.hover ();
+                }
+            }
+        }
+    }
+}
