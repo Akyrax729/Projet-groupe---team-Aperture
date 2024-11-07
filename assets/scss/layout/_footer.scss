@@ -3,12 +3,30 @@
 
 footer {
     background-color: var.$primarycolor;
-    @include mixins.flex ($justify: space-between);
-    padding: 2rem 0;
-    padding-right: 2rem;
+    // @include mixins.flex ($justify: space-between);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "a b c d"
+    ;
+
+    padding: 2rem;
+
+    .logo-footer {
+        grid-area: a;
+    }
+    .infooter {
+        grid-area: b;
+    }
+    .contact-footer {
+        grid-area: c;
+    }
+    .reseaux {
+        grid-area: d;
+    }
 
     div {
-        margin-left: 3rem;
         @include mixins.flex (); 
 
         a {
@@ -71,5 +89,30 @@ footer {
                 @include mixins.hover ();
             }
         }
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "a a"
+        "b c"
+        "d d"
+        ;
+    }
+}
+
+@media screen and (max-width : 512px) {
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "a"
+        "b"
+        "c"
+        "d"
+        ;
     }
 }

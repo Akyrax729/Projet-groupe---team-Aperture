@@ -1,3 +1,5 @@
+// BANNER CAROUSEL
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -37,9 +39,9 @@ function showSlides(n) {
 
 //   DEFILEMENT DU CAROUSEL
 
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 3000); 
+  // slideIndex++;
+  // // if (slideIndex > slides.length) {slideIndex = 1}
+  // // slides[slideIndex-1].style.display = "block";
+  // setTimeout(showSlides, 10000); 
 }
 
