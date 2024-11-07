@@ -1,2 +1,44 @@
 @use "../../abstract/mixins";
-@use "../../abstract/variable";
+@use "../../abstract/variable"as v;
+
+#event {
+    background-color: v.$secondarycolor;
+    color: white;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    border-radius: 15px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        font-size: 30px;
+    }
+
+    .event {
+        text-align: center;
+
+        img {
+            width: 50%;
+            object-fit: cover;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 5rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+    }
+}

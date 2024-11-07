@@ -3,38 +3,77 @@
 
 .actualite_evenements {
     background-color: v.$primarycolor;
+    display: flex;
 }
 
 #actualite {
     background-color: v.$secondarycolor;
     color: white;
     margin-left: 2rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
     border-radius: 15px;
-    width: 49%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        font-size: 30px;
+    }
 
     .text_droite {
         @include mixins.flex ($justify :flex-start, $align :flex-start);
+        margin-bottom: 2rem;
 
         img {
-            width: 20rem;
+            width: 40%;
             height: 15rem;
+            object-fit: cover;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            float: left;
+            border-radius: 15px;
+        }
+
+        h3 {
+            margin-bottom: 1rem;
+            margin-right: 2rem;
+            font-size: 20px;
         }
         
         p {
             font-size: 16px;
-            width: 30rem
+            width: 90%;
+            margin-left: 2rem;
         }
     }
 
     .text_gauche {
-        @include mixins.flex ();
+        @include mixins.flex($justify :flex-start, $align :flex-start);
+        margin-bottom: 2rem;
 
         img {
-            width: 20rem;
+            width: 40%;
             height: 15rem;
+            object-fit: cover;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            float: right;
+            border-radius: 15px;
+        }
 
+        h3 {
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+            font-size: 20px;
+        }
+        
+        p {
+            font-size: 16px;
+            width: 90%;
+            margin-left: 2rem;
         }
     }
-  
 }
