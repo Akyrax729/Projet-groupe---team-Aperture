@@ -38,14 +38,28 @@
 
         <section id="banner">
             <div id="carrousel">
-                <img src="assets/img/img2135.jpg" alt="">
-                <img src="assets/img/img2136.jpg" alt="">
-                <img src="assets/img/img2139.jpg" alt="">
-                <img src="assets/img/img2141.jpg" alt="">
-                <img src="assets/img/img2135.jpg" alt="">
-                <img src="assets/img/img2136.jpg" alt="">
-                <img src="assets/img/img2139.jpg" alt="">
-                <img src="assets/img/img2141.jpg" alt="">
+                <div class="slides">
+                    <img class="fade" src="assets/img/aucazein_100869.jpg" alt="">
+                </div>
+                <div class="slides">
+                    <img class="fade" src="assets/img/aucazein_100865.jpg" alt="">
+                </div>
+                <div class="slides">
+                    <img class="fade" src="assets/img/aucazein_100863.jpg" alt="">
+                </div>
+            </div>
+            <div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <div class="text-banner">
+                <h2>à propos de nous</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta porro fugit neque a! Consequuntur, vitae fugit labore eveniet quos similique! Dicta, facere ipsum adipisci dolore architecto quibusdam reprehenderit hic odit.</p>
             </div>
         </section>
     </header>
@@ -96,7 +110,7 @@
                 <li><a href="">Quoi mettre ici :')</a></li>
             </ul>
         </div>
-        <div>
+        <div class="column">
             <div>
                 <i class="fa-solid fa-phone"></i>
                 <p>05 61 04 71 72</p>
@@ -123,7 +137,7 @@
         </div>
     </footer>
 
-
+    <script src="assets/js/script.js"></script>
 <!-- 
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄░░░░░░░░░
