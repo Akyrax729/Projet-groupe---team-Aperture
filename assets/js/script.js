@@ -24,7 +24,7 @@ filtreType.addEventListener("change", function(){
 })
 
 
-// BANNER CAROUSEL
+// BANNER CARROUSEL
 
 let slideIndex = 1;
 showSlides(slideIndex);
