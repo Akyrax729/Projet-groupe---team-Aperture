@@ -1,0 +1,95 @@
+@use "../../abstract/mixins";
+@use "../../abstract/variable" as cl;
+main{
+    //  parti ___ equipe municipale______
+     font-family: "quicksand";
+    background-color: cl.$primarycolor;
+    .elus{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1{
+            font-size: 44px;
+        }
+        img{
+            width: 900px;
+            height: 500px;
+        }
+        h2{
+            color: cl.$accentcolor;
+            margin: 20px;
+        }
+        p{
+            font-size: 16px;
+            margin-bottom: 50px;
+            text-align: center
+
+        }
+       
+
+    }
+    .personnage{
+        @include mixins.flex();
+        flex-direction: column;
+        width: 100%;
+        span{
+            display: block
+        }
+        div{
+            background-color:cl.$secondarycolor ;
+            width: 400px;
+            border-radius: 25px;
+            margin: 22px;
+            color: aliceblue;
+            text-align: center;
+            padding: 1rem;
+           
+        }
+        img{
+            border-radius: 50%;
+            width: 105px;
+            transform: translate(5%, -50%);
+            
+        }
+        .adjoint{
+            width: 80%;
+
+            display: flex;
+            justify-content: space-between;  
+            
+        }
+        h4{
+            margin-top: 0px ;
+        }
+    }
+}
+// ////////////////////responcive/////////////////////////
+@media screen and (max-width: 1020px) {
+   main{
+        .elus{
+            img{
+            width: 80%;
+            height: 60%;
+
+            }
+
+
+        }
+        .personnage{
+            div{
+                width: 80%;
+            }
+
+        }
+    }
+}
+@media screen and (max-width: 520px) {
+    .personnage{
+        .adjoint{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}
