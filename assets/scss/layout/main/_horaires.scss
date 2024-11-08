@@ -34,8 +34,7 @@ main{
     }
     // la ligne verticale */
     .vertical-line {
-    width: 2px;                 
-                
+    width: 2px;                        
     background-color: #ffffff;     
     margin:  15px;             
     display: inline-block;       
@@ -112,10 +111,10 @@ main{
             }
     }
     iframe{
-        position: absolute;
+        
         width: 80%;
-        height:40% ;
-        transform: translate(12%, -10%);
+        height:100% ;
+        transform: translate(12%, -30%);
 
     }
 }
@@ -142,7 +141,15 @@ main{
         #feuille {
             width: 80%;
             margin: auto;
+            padding-bottom: 50px;
         }
-    }}
+    }
+    iframe{
+        
+       margin-top:10px;
+       
+
+    }
+}
     
 }
