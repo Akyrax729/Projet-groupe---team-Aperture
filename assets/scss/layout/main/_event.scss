@@ -1,2 +1,128 @@
 @use "../../abstract/mixins";
-@use "../../abstract/variable";
+@use "../../abstract/variable"as v;
+
+#event {
+    background-color: v.$secondarycolor;
+    color: white;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    border-radius: 15px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        font-size: 30px;
+    }
+
+    .event {
+        text-align: center;
+
+        img {
+            width: 50%;
+            object-fit: cover;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 5rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+
+    #actualite {
+        width: 100%;
+        margin: 0rem;
+    }
+
+    .actualite_evenements {
+        flex-direction: column;
+    }
+
+    #event {
+        margin: 0rem;
+        margin-top: 2rem;
+        width: 100%;
+        padding-bottom: 2rem;
+    } 
+}
+
+@media screen and (max-width: 600px){
+    #actualite {
+        text-align: center;
+
+        .text_droite {
+
+            .colonne {
+                display: flex;
+                flex-direction: column;
+                margin-left: 2rem;
+                margin-right: 2rem;
+
+                img {
+                    margin: 0rem;
+                    width: 100%;
+                }
+
+                h3 {
+                    margin: 0rem;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    margin: 0rem;
+                    width: 100%;
+                }
+            }
+        }
+        .text_gauche {
+
+            .colonne {
+                display: flex;
+                flex-direction: column;
+                margin-left: 2rem;
+                margin-right: 2rem;
+
+                img {
+                    margin: 0rem;
+                    width: 100%;
+                }
+
+                h3 {
+                    margin: 0rem;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    margin: 0rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #event {
+        
+        .event {
+
+            img {
+                width: 80%;
+            }
+        }
+    }
+}
