@@ -1,0 +1,44 @@
+@use "../../abstract/mixins";
+@use "../../abstract/variable" as var;
+
+#activites {
+    background-color: var.$primarycolor;
+    padding: 1rem 2rem;
+    text-align: center;
+    color: white;
+
+    div {
+        background-color: var.$secondarycolor;
+        border-radius: 20px;
+        padding: 2rem 6rem;
+        margin-bottom: 2rem;
+
+        h2 {
+            font-size: 32px;
+        }
+
+        article {
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+
+            h3 {
+                padding: 0.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:650px) {
+    #activites {
+        div {
+            padding: 1rem;
+
+            article {
+                padding: 1rem;
+            }
+        }
+    }
+    
+}
