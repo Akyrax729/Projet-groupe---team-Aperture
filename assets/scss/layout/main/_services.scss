@@ -9,10 +9,7 @@ main {
         h2{
             color: cl.$accentcolor;
         }
-        a{
-            color: white;
-            @include mixins.hover ();
-        }
+       
         .documents_rendez_vous{
             padding-top: 3rem;
             display: flex;
@@ -22,6 +19,10 @@ main {
             .documents{
                 li{
                     padding: 1rem;
+                    a{
+                        color: white;
+                        @include mixins.hover ();
+                    }
                 }
 
             }
@@ -40,6 +41,10 @@ main {
                 background-color: #f9f9f9;
                 border-radius: 8px;               
                 box-shadow: 0 4px 8px rgba(235, 235, 235, 0.728);
+                a{
+                    color: white;
+                    @include mixins.hover ();
+                }
                 label {
                     display: block;
                     margin-bottom: 8px;
@@ -51,13 +56,13 @@ main {
                         width: 50%;  
                         margin: auto;                                                                                                                                            
                         padding: 8px;
-                            background-color: #3a3b3a;               
+                        background-color: #3a3b3a;               
                         color: white;
-                            font-size: 16px;
+                        font-size: 16px;
                         border: none;
-                            border-radius: 4px;
+                        border-radius: 4px;
                         cursor: pointer;
-                            transition: background-color 0.3s ease;
+                        transition: background-color 0.3s ease;
                         }                                              
                         }
                         .rendez_vous button:hover {
@@ -66,10 +71,39 @@ main {
 
             }
         }
-        .Signalement{
+        .signalement{
+           
             text-align: center;
-            margin: 3rem;
-            padding: 3rem;
+            margin: 1rem;
+            padding: 1rem;
+            a{
+                color: rgb(192, 16, 16);
+                @include mixins.hover ();
+            }
+           
         }
     }
+    // ////////////////////responcive/////////////////////////
 
+    @media screen and (max-width: 580px) {
+        main{ 
+            .documents_rendez_vous_Signal{
+                margin: auto;
+      
+               
+                .documents_rendez_vous{
+                  
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: center;
+
+                    .rendez_vous{
+                        margin: 3rem;
+                    }
+                .Signalement{
+                    text-align: center;
+                    margin: auto;
+                }
+                    
+        }
+    }}}
