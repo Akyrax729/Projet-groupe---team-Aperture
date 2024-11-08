@@ -42,3 +42,87 @@
         }
     }
 }
+
+@media screen and (max-width: 1000px){
+
+    #actualite {
+        width: 100%;
+        margin: 0rem;
+    }
+
+    .actualite_evenements {
+        flex-direction: column;
+    }
+
+    #event {
+        margin: 0rem;
+        margin-top: 2rem;
+        width: 100%;
+        padding-bottom: 2rem;
+    } 
+}
+
+@media screen and (max-width: 600px){
+    #actualite {
+        text-align: center;
+
+        .text_droite {
+
+            .colonne {
+                display: flex;
+                flex-direction: column;
+                margin-left: 2rem;
+                margin-right: 2rem;
+
+                img {
+                    margin: 0rem;
+                    width: 100%;
+                }
+
+                h3 {
+                    margin: 0rem;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    margin: 0rem;
+                    width: 100%;
+                }
+            }
+        }
+        .text_gauche {
+
+            .colonne {
+                display: flex;
+                flex-direction: column;
+                margin-left: 2rem;
+                margin-right: 2rem;
+
+                img {
+                    margin: 0rem;
+                    width: 100%;
+                }
+
+                h3 {
+                    margin: 0rem;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    margin: 0rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #event {
+        
+        .event {
+
+            img {
+                width: 80%;
+            }
+        }
+    }
+}
