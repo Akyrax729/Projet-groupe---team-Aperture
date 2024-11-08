@@ -3,20 +3,37 @@
 
 footer {
     background-color: var.$primarycolor;
-    @include mixins.flex ($justify: space-between);
-    padding: 2rem 0;
-    padding-right: 2rem;
+    // @include mixins.flex ($justify: space-between);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "a b c d"
+    ;
+
+    padding: 2rem;
+
+    .logo-footer {
+        grid-area: a;
+    }
+    .infooter {
+        grid-area: b;
+    }
+    .contact-footer {
+        grid-area: c;
+    }
+    .reseaux {
+        grid-area: d;
+    }
 
     div {
-        margin-left: 3rem;
         @include mixins.flex (); 
 
         a {
             @include mixins.flex ();
-            font-size: 20px;
+            font-size: 24px;
             @include mixins.hover();
             color: black;
-            
         }
         img {
             width: 64px;
@@ -25,7 +42,7 @@ footer {
 
         i {
             margin-right: 1rem;
-            font-size: 24px;
+            font-size: 20px;
             color: var.$secondarycolor;
         }
 
@@ -34,13 +51,13 @@ footer {
 
             i {
                 color: black;
-                font-size: 48px;
+                font-size: 32px;
             }
             .fa-facebook {
                 @include mixins.hover (rgb(46, 46, 192));
             }
             .fa-x-twitter {
-                @include mixins.hover (black);
+                @include mixins.hover (grey);
             }
             .fa-instagram {
                 @include mixins.hover (rgb(252, 68, 99));
@@ -56,16 +73,46 @@ footer {
     .column {
         flex-direction: column;
 
-        i {
+        div {
+            margin: 0.4rem 0;
+        }
+        &>i {
             margin: 0;
         }
     }
     ul {
         li {
             a {
+                display: block;
                 color: black;
+                font-size: 20px;
                 @include mixins.hover ();
             }
         }
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "a a"
+        "b c"
+        "d d"
+        ;
+    }
+}
+
+@media screen and (max-width : 512px) {
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "a"
+        "b"
+        "c"
+        "d"
+        ;
     }
 }

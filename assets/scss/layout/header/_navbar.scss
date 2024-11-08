@@ -7,13 +7,13 @@ header {
 
 #navbar {
     @include mixins.flex ($justify: space-between);
+    padding: 2rem;
 
     div {
-        margin-left: 3rem;
 
         a {
             @include mixins.flex ();
-            font-size: 20px;
+            font-size: 24px;
             @include mixins.hover();
             color: black;
             
@@ -25,7 +25,6 @@ header {
     }
 
     nav {
-        margin-right: 3rem;
         ul {
             @include mixins.flex ();
 
@@ -43,6 +42,31 @@ header {
             }
             .trait {
                 border-right: 1px solid black;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #navbar {
+        flex-direction: column;
+
+        div {
+            margin-bottom: 2rem;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    #navbar {
+        flex-direction: column;
+
+        nav {
+            ul {
+                flex-direction: column;
+
+                .trait {
+                    border: none;
+                }
             }
         }
     }
