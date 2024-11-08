@@ -1,0 +1,148 @@
+@use "../../abstract/mixins";
+@use "../../abstract/variable" as cl;
+main{
+    //  parti ___ Horaires d'ouverture______Formulaire de contact
+     font-family: "quicksand";
+     border: #000000 1px solid ;
+
+    
+    .horaires_formulaire{
+        background-color: cl.$secondarycolor;
+        width: 90%;
+        display: flex;
+        position: relative;
+        margin: auto;       
+        justify-content:space-around;
+        align-items: stretch;
+        h2{
+            margin: 20px;
+            font-size: 33px;
+            color: cl.$accentcolor;
+        }
+    }
+    // parti ___ Horaires d'ouverture
+    .horaires{
+        color: white;
+        span{
+            display: block;
+            padding-top: 25px;
+        }
+        img{
+            width: 300px;
+            padding: 25px;
+        }
+    }
+    // la ligne verticale */
+    .vertical-line {
+    width: 2px;                 
+                
+    background-color: #ffffff;     
+    margin:  15px;             
+    display: inline-block;       
+    vertical-align: top;
+    }
+// ___Formulaire de contact/////
+    .formulaire{             
+            #feuille {
+                width: 400px;
+                padding: 20px;
+                background-color: #ffffff;
+                box-shadow: 7px 7px 7px rgba(249, 255, 249, 0.105);
+                border-radius: 8px;
+                margin-bottom: 50px;
+            }
+            h3 {
+                margin-top: 0;
+                color: #000000;
+            }
+
+            p {
+                font-size: 0.9em;
+                color: #666;
+            }
+
+            /* Ligne de séparation */
+            #line {
+                height: 2px;
+                background-color: #020000;
+                margin: 15px 0;
+            }
+
+
+            label {
+                font-weight: bold;
+                color: #000000;
+                margin-top: 0px;
+                display: block;
+            }
+
+
+            
+          #feuille input,  #feuille textarea {
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                font-size: 1em;
+                box-sizing: border-box;
+                    }
+
+            /* Champ de texte multi-ligne */
+            #feuille textarea {
+                resize: vertical;
+            }
+
+            /* Bouton Envoyer */
+            #feuille button {
+                width: 50%;              
+                padding: 10px;
+                background-color: #999c99;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            #feuille button:hover {
+                background-color: cl.$secondarycolor;
+            }
+    }
+    iframe{
+        position: absolute;
+        width: 80%;
+        height:40% ;
+        transform: translate(12%, -10%);
+
+    }
+}
+// ////////////////////responcive/////////////////////////
+@media screen and (max-width: 980px) {
+    main{ 
+            justify-content: center;
+                  
+            .horaires_formulaire{
+                
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        .vertical-line {
+            visibility: hidden;
+        }
+}        
+@media screen and (max-width: 500px) {
+            main{ 
+        // ___Formulaire de contact/////
+    .formulaire{             
+        #feuille {
+            width: 80%;
+            margin: auto;
+        }
+    }}
+    
+}
