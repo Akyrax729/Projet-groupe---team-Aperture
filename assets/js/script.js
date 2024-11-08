@@ -43,13 +43,4 @@ function showSlides(n) {
   // // if (slideIndex > slides.length) {slideIndex = 1}
   // // slides[slideIndex-1].style.display = "block";
   // setTimeout(showSlides, 10000); 
-}
-
-// SIGNALEMENT
-
-const title = document.getElementById("signalement-title");
- function blinkTitle() {       
-                    title.style.visibility = (title.style.visibility === 'hidden') ? 'visible' : 'hidden';
-                }
-    setInterval(blinkTitle, 500);
-    
+}    

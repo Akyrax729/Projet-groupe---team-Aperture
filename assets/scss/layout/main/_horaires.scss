@@ -2,12 +2,11 @@
 @use "../../abstract/variable" as cl;
 main{
     //  parti ___ Horaires d'ouverture______Formulaire de contact
-     font-family: "quicksand";
-     border: #000000 1px solid ;
 
     
     .horaires_formulaire{
         background-color: cl.$secondarycolor;
+        border-radius: 20px;
         width: 90%;
         display: flex;
         position: relative;
