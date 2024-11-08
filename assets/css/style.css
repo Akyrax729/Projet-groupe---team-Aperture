@@ -1,9 +1,9 @@
 /* Error: Can't find stylesheet to import.
  *   ,
- * 5 | @use "main/lieux";
- *   | ^^^^^^^^^^^^^^^^^
+ * 4 | @use "main/services";
+ *   | ^^^^^^^^^^^^^^^^^^^^
  *   '
- *   assets\scss\layout\_main.scss 5:1  @use
+ *   assets\scss\layout\_main.scss 4:1  @use
  *   assets\scss\style.scss 4:1         root stylesheet */
 
 body::before {
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 5 \2502  @use \"main/lieux\";\d\a   \2502  ^^^^^^^^^^^^^^^^^\a   \2575 \a   assets\\scss\\layout\\_main.scss 5:1  @use\a   assets\\scss\\style.scss 4:1         root stylesheet";
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 4 \2502  @use \"main/services\";\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   assets\\scss\\layout\\_main.scss 4:1  @use\a   assets\\scss\\style.scss 4:1         root stylesheet";
 }
