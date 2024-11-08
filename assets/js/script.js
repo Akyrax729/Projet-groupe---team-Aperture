@@ -22,6 +22,8 @@ filtreType.addEventListener("change", function(){
     console.log(document.getElementsByClassName("autres").length)
     // console.log(Autres)
 })
+
+
 // BANNER CAROUSEL
 
 let slideIndex = 1;
